@@ -9,7 +9,7 @@ import Footer from './components/Footer';
 function App() {
   return (
     <ChakraProvider>
-      <Box minH="100vh" display="flex" flexDirection="column">
+      <Box minH="100vh" minW="100vw" display="flex" flexDirection="column">
         <Header />
         <Hero />
         <Footer />

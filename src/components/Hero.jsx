@@ -6,19 +6,11 @@ const Hero = () => {
   return (
     <Box bg="gray.100" py={20} textAlign="center">
       <Heading as="h1" size="2xl" mb={4}>
-        Welcome to Chakra UI
+        H1 2xl
       </Heading>
       <Text fontSize="lg" mb={6}>
-        Build accessible React apps with speed.
+        fontSize lg
       </Text>
-      <Stack direction="row" spacing={4} justify="center">
-        <Button colorScheme="teal" size="lg">
-          Get Started
-        </Button>
-        <Button colorScheme="teal" size="lg" variant="outline">
-          Learn More
-        </Button>
-      </Stack>
     </Box>
   );
 };
