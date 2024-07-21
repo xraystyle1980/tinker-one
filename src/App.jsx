@@ -1,17 +1,17 @@
 // src/App.jsx
 import React from 'react';
 import { ChakraProvider, Box } from '@chakra-ui/react';
+import theme from "./theme/theme";
 import Header from './components/Header';
-import Hero from './components/Hero';
-import Features from './components/Features';
+import Tabs from './components/Tabs';
 import Footer from './components/Footer';
 
 function App() {
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <Box minH="100vh" minW="100vw" display="flex" flexDirection="column">
         <Header />
-        <Hero />
+        <Tabs />
         <Footer />
       </Box>
     </ChakraProvider>
