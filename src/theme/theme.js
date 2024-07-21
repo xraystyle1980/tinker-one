@@ -7,6 +7,13 @@ const tabsTheme = defineStyleConfig({
   baseStyle: {
     tab: {
       fontWeight: "bold",
+      paddingLeft: '24', 
+      paddingRight: '24', 
+      paddingTop: '8', 
+      paddingBottom: '8', 
+      background: '#221D25', 
+      boxShadow: '0px 1px 0px rgba(248, 244, 252, 0.04) inset', 
+      borderRadius: 4,
       _selected: {
         color: "teal.500",
         borderColor: "teal.500",

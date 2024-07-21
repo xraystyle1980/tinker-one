@@ -12,6 +12,7 @@ function App() {
       <Box minH="100vh" minW="100vw" display="flex" flexDirection="column">
         <Header />
         <Tabs />
+        
         <Footer />
       </Box>
     </ChakraProvider>
