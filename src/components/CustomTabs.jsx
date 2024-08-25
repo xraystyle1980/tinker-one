@@ -8,15 +8,12 @@ const CustomTabs = () => {
         <Box display="flex" flex="1">
           <CustomTab>Tab 1</CustomTab>
           <CustomTab>Tab 2</CustomTab>
-        </Box>
-        <Box display="flex" alignItems="center" justifyContent="center">
           <CustomTab>Tab 3</CustomTab>
         </Box>
       </TabList>
-
       <TabPanels>
         <TabPanel>
-          <p>Content 1</p>
+          <p>Content 1ne</p>
         </TabPanel>
         <TabPanel>
           <p>Content 2</p>

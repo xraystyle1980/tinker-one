@@ -1,66 +1,80 @@
 import { extendTheme } from "@chakra-ui/react";
+import { color } from "framer-motion";
 
 // Define custom styles for Tabs
 const customTabs = {
   baseStyle: {
     tab: {
-      color: "gray.500",
-      fontWeight: "bold",
-      m: 1,
-      _selected: {
-        color: "teal.500",
-        borderColor: "teal.500",
-      },
-      _hover: {
-        color: "teal.300",
-      },
+        fontFamily: 'DM Sans',
+        fontWeight: '400',
+        _selected: {
+            color: '#DCC8F0',
+            boxShadow: '0px 0px 0px 1px #100414, 0px 0px 0px 1px rgba(248, 244, 252, 0.04) inset, 0px 1px 0px 0px rgba(248, 244, 252, 0.04) inset',
+        },
+        _hover: {
+            color: '#DCC8F0',
+        },
+        _focus: {
+            boxShadow: '0px 0px 0px 1px #100414, 0px 0px 0px 1px rgba(248, 244, 252, 0.04) inset, 0px 1px 0px 0px rgba(248, 244, 252, 0.04) inset',
+            outline: 'none', // Ensure no default outline is applied
+        },
+        _focusVisible: {
+            boxShadow: '0px 0px 0px 1px #100414, 0px 0px 0px 1px rgba(248, 244, 252, 0.04) inset, 0px 1px 0px 0px rgba(248, 244, 252, 0.04) inset',
+            outline: 'none', // Ensure no default outline is applied
+        },
+        _active: {
+            bg: '#1A161D', 
+            color: '#DCC8F0',
+        },
     },
     tablist: {
-      borderBottom: "2px solid",
-      borderColor: "gray.200",
-      borderRadius: '8',
-      display: "flex",
-      p: 4,
-      background: '#000',
-      justifyContent: "space-between", // Custom structure
+        borderBottom: 'none',
+        borderColor: 'none',
+        borderRadius: 16,
+        display: "flex",
+        pt: 4,
+        pr: 2,
+        pb: 4,
+        pl: 2,
+        justifyContent: "space-between",
+        /* Dimension/Depressed/Default */
+        boxShadow: '0px -1px 0px 0px rgba(255, 255, 255, 0.16) inset, 0px 0px 0px 1px rgba(0, 0, 0, 0.68) inset',
     },
     tabpanel: {
       p: 4,
       mt: 4,
       mb: 4,
-      ml: 1,
-      mr: 1,
-      bg: 'none', // Custom background for tab panels
+      bg: 'none',
+      color: 'white',
     },
   },
   sizes: {
     md: {
       tab: {
         fontSize: 48,
-        padding: 4,
-      },
-    },
-    lg: {
-      tab: {
-        fontSize: "lg",
-        padding: 6,
+        pt: 4,
+        pr: 12,
+        pb: 4,
+        pl: 12,
+        mr: 2,
+        ml: 2,
       },
     },
   },
   variants: {
     enclosed: {
       tablist: {
-        mb: "-1px",
+        borderBottom: 'none',
+        background: '#161219',
       },
       tab: {
-        borderTopRadius: "md",
-        border: "1px solid",
-        borderColor: "gray.200",
-        mb: "-1px",
+        color: '#8F8796',
+        border: 12,
+        borderColor: 'none',
         _selected: {
-          color: "teal.600",
-          borderColor: "inherit",
-          borderBottomColor: "white",
+          color: "#DCC8F0",
+          background: '#221D25',
+          boxShadow: '0px 0px 0px 1px #100414, 0px 0px 0px 1px rgba(248, 244, 252, 0.04) inset, 0px 1px 0px 0px rgba(248, 244, 252, 0.04) inset',
         },
       },
     },
@@ -68,7 +82,7 @@ const customTabs = {
   defaultProps: {
     size: "md",
     variant: "enclosed",
-    colorScheme: "teal",
+    colorScheme: "dark",
   },
 };
 

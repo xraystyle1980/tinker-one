@@ -4,7 +4,7 @@ import { Box } from '@chakra-ui/react';
 const FullHeightFullWidthDiv = ({ children }) => {
   return (
     <Box
-      background='#888888'
+      background='#161219'
       display="flex"
       height="100vh"
       width="100vw"
