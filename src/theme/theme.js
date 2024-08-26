@@ -1,95 +1,59 @@
-import { extendTheme } from "@chakra-ui/react";
-import { color } from "framer-motion";
+// src/theme/theme.js
+import { extendTheme } from '@chakra-ui/react';
 
-// Define custom styles for Tabs
-const customTabs = {
+// Define custom button styles
+const customButtonStyles = {
   baseStyle: {
-    tab: {
-        fontFamily: 'DM Sans',
-        fontWeight: '400',
-        _selected: {
-            color: '#DCC8F0',
-            boxShadow: '0px 0px 0px 1px #100414, 0px 0px 0px 1px rgba(248, 244, 252, 0.04) inset, 0px 1px 0px 0px rgba(248, 244, 252, 0.04) inset',
-        },
-        _hover: {
-            color: '#DCC8F0',
-        },
-        _focus: {
-            boxShadow: '0px 0px 0px 1px #100414, 0px 0px 0px 1px rgba(248, 244, 252, 0.04) inset, 0px 1px 0px 0px rgba(248, 244, 252, 0.04) inset',
-            outline: 'none', // Ensure no default outline is applied
-        },
-        _focusVisible: {
-            boxShadow: '0px 0px 0px 1px #100414, 0px 0px 0px 1px rgba(248, 244, 252, 0.04) inset, 0px 1px 0px 0px rgba(248, 244, 252, 0.04) inset',
-            outline: 'none', // Ensure no default outline is applied
-        },
-        _active: {
-            bg: '#1A161D', 
-            color: '#DCC8F0',
-        },
-    },
-    tablist: {
-        borderBottom: 'none',
-        borderColor: 'none',
-        borderRadius: 16,
-        display: "flex",
-        pt: 4,
-        pr: 2,
-        pb: 4,
-        pl: 2,
-        justifyContent: "space-between",
-        /* Dimension/Depressed/Default */
-        boxShadow: '0px -1px 0px 0px rgba(255, 255, 255, 0.16) inset, 0px 0px 0px 1px rgba(0, 0, 0, 0.68) inset',
-    },
-    tabpanel: {
-      p: 4,
-      mt: 4,
-      mb: 4,
-      bg: 'none',
-      color: 'white',
-    },
+    fontWeight: 'bold', // Normal, bold, etc.
   },
   sizes: {
-    md: {
-      tab: {
-        fontSize: 48,
-        pt: 4,
-        pr: 12,
-        pb: 4,
-        pl: 12,
-        mr: 2,
-        ml: 2,
-      },
+    xl: {
+      h: '56px',
+      fontSize: 'lg',
+      px: '32px',
     },
   },
   variants: {
-    enclosed: {
-      tablist: {
-        borderBottom: 'none',
-        background: '#161219',
+    solid: {
+      bg: 'primary.500', // Custom primary color from theme
+      color: 'white',
+      _hover: {
+        bg: 'primary.600',
       },
-      tab: {
-        color: '#8F8796',
-        border: 12,
-        borderColor: 'none',
-        _selected: {
-          color: "#DCC8F0",
-          background: '#221D25',
-          boxShadow: '0px 0px 0px 1px #100414, 0px 0px 0px 1px rgba(248, 244, 252, 0.04) inset, 0px 1px 0px 0px rgba(248, 244, 252, 0.04) inset',
-        },
+    },
+    outline: {
+      borderColor: 'primary.500',
+      color: 'primary.500',
+      _hover: {
+        bg: 'primary.50',
       },
     },
   },
   defaultProps: {
-    size: "md",
-    variant: "enclosed",
-    colorScheme: "dark",
+    size: 'md', // Default size
+    variant: 'solid', // Default variant
+    colorScheme: 'primary', // Default color scheme
   },
 };
 
-// Extend the theme
+// Extend Chakra's theme with custom button styles
 const theme = extendTheme({
+  colors: {
+    primary: {
+      50: '#e3f2fd',
+      100: '#bbdefb',
+      200: '#90caf9',
+      300: '#64b5f6',
+      400: '#42a5f5',
+      500: '#2196f3',
+      600: '#1e88e5',
+      700: '#1976d2',
+      800: '#1565c0',
+      900: '#0d47a1',
+    },
+  },
   components: {
-    Tabs: customTabs,
+    Button: customButtonStyles, // Apply custom styles to Button component
   },
 });
 
